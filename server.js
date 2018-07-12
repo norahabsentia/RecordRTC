@@ -9,7 +9,7 @@ var server = require('http'),
 function serverHandler(request, response) {
     var uri = url.parse(request.url).pathname,
         filename = path.join(process.cwd(), uri);
-response.header("Access-Control-Allow-Origin", "*");
+//response.header("Access-Control-Allow-Origin", "*");
     fs.exists(filename, function(exists) {
         if (!exists) {
             response.writeHead(404, {
