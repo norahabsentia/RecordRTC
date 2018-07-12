@@ -56,8 +56,9 @@ document.getElementById('btn-stop-recording').onclick = function() {
         document.getElementById('preview-video').src = URL.createObjectURL(blob);
         document.getElementById('preview-video').parentNode.style.display = 'block';
         elementToRecord.style.display = 'none';
-
-        // window.open(URL.createObjectURL(blob));
+        console.log(URL.createObjectURL(blob));
+console.log(blob);
+         window.open(URL.createObjectURL(blob));
     });
 };
 
